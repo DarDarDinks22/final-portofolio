@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes"
 
- const project: React.FC<projectPropTypes> = ({
+ const Project: React.FC<projectPropTypes> = ({
     children,
     link,
     altName,
@@ -20,4 +20,4 @@ import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes"
     </Link>
 }
 
-export default project;
+export default Project;
