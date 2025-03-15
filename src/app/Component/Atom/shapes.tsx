@@ -46,7 +46,7 @@ const Shapes = () => {
     return (
       <div className="h-screen w-full">
         <Canvas>
-          <directionalLight position={[10, 1, 1]}/>
+          <directionalLight position={[2, 1, 1]}/>
           <BackgroundSphere/>
           <RotatingSphere/>
         </Canvas>  

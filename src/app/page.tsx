@@ -14,7 +14,7 @@ const tektur = Tektur({subsets: ["latin"]})
 export default function Home() {
   return (
     <>
-    <div className={`${tektur.className} h-full w-full relative`}>
+    <div className={`${tektur.className} h-full w-full bg-black`}>
         <NavBar/>
         <Homepage/>
     </div>
