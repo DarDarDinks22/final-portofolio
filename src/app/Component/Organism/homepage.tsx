@@ -1,4 +1,4 @@
-import Shapes from "../Atom/shapes"
+import Shapes from "../Atom/Shapes"
 import { Holo } from "../Atom/holo";
 import HeroText from "../Molecule/heroText";
 
