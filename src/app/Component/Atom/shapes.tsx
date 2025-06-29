@@ -1,12 +1,8 @@
 import * as THREE from "three"
 import { Canvas } from "@react-three/fiber"
-import { ContactShadows, Float, Environment} from "@react-three/drei"
-import { Suspense, useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 import {useFrame} from "@react-three/fiber"
-import { gsap } from "gsap"
-import { height, width } from "@fortawesome/free-brands-svg-icons/fa42Group"
-import { Text } from "@react-three/drei"
-import { Holo } from "./holo"
+import { Holo } from "./Holo"
 
   const RotatingSphere = () => {
     const ref = useRef<THREE.Mesh | null>(null);
@@ -18,7 +14,7 @@ import { Holo } from "./holo"
     });
   
     return (
-      <mesh>
+      <mesh ref={ref}>
         <Holo/>
         <meshStandardMaterial color="#b6b6b6" />
       </mesh>
