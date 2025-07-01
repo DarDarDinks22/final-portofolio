@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const NavBar = () =>{
     return (
-    <div className="flex justify-evenly m-auto p-4 text-xl sticky top-0 bg-black font-semibold">
+    <div className="flex justify-evenly m-auto p-4 text-xl sticky top-0 bg-[#1A1E4D] font-semibold">
         <Link href={"/"}>HOME</Link>
         <Link href={"/"}>ABOUT</Link>
         <Link href={"/"}>PROJECT</Link>

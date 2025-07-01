@@ -1,13 +1,13 @@
 import Shapes from "../Atom/Shapes"
-import { Holo } from "../Atom/holo";
-import HeroText from "../Molecule/heroText";
+import { Holo } from "../Atom/Holo";
+import HeroText from "../Molecule/HeroText";
 
  const Homepage = () =>{
     return(
-    <div className="">
-        <Shapes/>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl">
-        <HeroText/>
+    <div>
+        <div className="flex justify-center items-center px-24 text-3xl h-screen w-full ">
+            <HeroText/>
+            <Shapes/>
         </div>
     </div>
 )}

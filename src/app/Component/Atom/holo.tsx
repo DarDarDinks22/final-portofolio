@@ -20,19 +20,21 @@ export function Holo(props: React.ComponentProps<'group'>) {
   const { nodes, materials } = useGLTF('/3dModel/fluxs_pit_stop.glb') as unknown as GLTFResult;
 
   return (
-    <group ref={group} {...props} dispose={null} scale={[2,2,2]} position={[2,-1,1]}>
+    <group ref={group} {...props} dispose={null} scale={[2.5,2.5,2.5]} position={[0,-1,0]}>
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.039}>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Object_2.geometry}
           material={materials.Back}
+
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Object_3.geometry}
           material={materials.Front}
+          emissive="#00ffff" emissiveIntensity={2}
         />
       </group>
     </group>

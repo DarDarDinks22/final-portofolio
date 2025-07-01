@@ -52,8 +52,9 @@ const HeroText = () => {
   }, []);
 
   return (
-    <h1>
-        Hi, My name is <span ref={h1Ref}></span> and im a Web Developer
+    <h1 className="tracking-widest font-extrabold w-full">
+        Hi, My name is <span ref={h1Ref}></span> 
+          <p>and im a Web Developer</p>
     </h1>
   );
 };

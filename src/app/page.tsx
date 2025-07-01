@@ -13,11 +13,9 @@ const tektur = Tektur({subsets: ["latin"]})
 
 export default function Home() {
   return (
-    <>
-    <div className={`${tektur.className} h-full w-full bg-black`}>
+    <div className={`${tektur.className} h-screen w-full overflow-visible bg-[#1A1E4D] m-auto`}>
         <NavBar/>
         <Homepage/>
     </div>
-    </>
   );
 }

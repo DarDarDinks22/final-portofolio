@@ -1,37 +1,46 @@
 import * as THREE from "three"
-import { Canvas } from "@react-three/fiber"
+import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { useRef } from "react"
-import {useFrame} from "@react-three/fiber"
 import { Holo } from "./Holo"
 
-  const RotatingSphere = () => {
-    const ref = useRef<THREE.Mesh | null>(null);
-  
-    useFrame((state, delta) => {
-      if (ref.current) {
-        ref.current.rotation.y += delta * 0.05;
-      }
-    });
-  
-    return (
-      <mesh ref={ref}>
-        <Holo/>
-        <meshStandardMaterial color="#b6b6b6" />
-      </mesh>
-    );
-  };
+const HoloRobot = () => {
+  const meshRef = useRef<THREE.Group>(null!)
+  const { mouse } = useThree()
 
-const Shapes = () => {
+  useFrame(() => {
+    if (meshRef.current) {
+      const maxRotation = 0.4
+      const targetY = THREE.MathUtils.clamp(mouse.x * maxRotation, -maxRotation, maxRotation)
+      const targetX = THREE.MathUtils.clamp(mouse.y * maxRotation, -maxRotation, maxRotation)
 
-    return (
-      <div className="h-screen w-full">
-        <Canvas>
-          <directionalLight position={[2, 1, 1]}/>
-          <RotatingSphere/>
-        </Canvas>  
-      </div>
-        
-    )
+      meshRef.current.rotation.x = THREE.MathUtils.lerp(
+        meshRef.current.rotation.x,
+        -targetX,
+        0.1
+      )
+      meshRef.current.rotation.y = THREE.MathUtils.lerp(
+        meshRef.current.rotation.y,
+        targetY,
+        0.1
+      )
+    }
+  })
+
+  return (
+    <group ref={meshRef}>
+      <Holo />
+    </group>
+  )
 }
 
-export default Shapes;
+const Shapes = () => {
+  return (
+    <Canvas camera={{ position: [0, 0, 5] }}>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[2, 1, 1]} />
+      <HoloRobot />
+    </Canvas>
+  )
+}
+
+export default Shapes
