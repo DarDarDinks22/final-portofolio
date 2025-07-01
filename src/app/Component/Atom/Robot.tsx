@@ -1,7 +1,9 @@
 import * as THREE from "three"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
+import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { useRef } from "react"
-import { Holo } from "./Holo"
+import { Holo } from "./holo"
+import WireBox from "./WireBox"
 
 const HoloRobot = () => {
   const meshRef = useRef<THREE.Group>(null!)
@@ -28,19 +30,22 @@ const HoloRobot = () => {
 
   return (
     <group ref={meshRef}>
-      <Holo />
+      <Holo/>
     </group>
   )
 }
-
-const Shapes = () => {
+ const Robot = () => {
   return (
     <Canvas camera={{ position: [0, 0, 5] }}>
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[2, 1, 1]} />
+      <ambientLight intensity={3} />
+      <directionalLight position={[0, 0, -5]} />
+      <EffectComposer>
+        <Bloom intensity={1.5} luminanceThreshold={0.1} luminanceSmoothing={0.2} />
+      </EffectComposer>
       <HoloRobot />
+      
     </Canvas>
   )
 }
 
-export default Shapes
+export default Robot;

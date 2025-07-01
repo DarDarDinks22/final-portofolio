@@ -1,4 +1,7 @@
 import { useRef, useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
+import Ball from "../Atom/WireBox";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 const HeroText = () => {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -11,7 +14,7 @@ const HeroText = () => {
 
   const animationLoop = (currentTimestamp: number) => {
     if (!previousTimeStamp.current) previousTimeStamp.current = currentTimestamp;
-    const secondsSinceLastFrame = (currentTimestamp - previousTimeStamp.current) / 1000;
+    const secondsSinceLastFrame = (currentTimestamp - previousTimeStamp.current) / 750;
     previousTimeStamp.current = currentTimestamp;
 
     elapsedSeconds.current += secondsSinceLastFrame;
@@ -26,7 +29,7 @@ const HeroText = () => {
       if (i < charactersToReveal) {
         character = hiddenText[i];
       } else if (hiddenText[i] === ' ') {
-        character = ' '; // preserve spaces
+        character = ' '; 
       } else {
         character = alphabet[Math.floor(Math.random() * alphabet.length)];
       }
@@ -52,9 +55,14 @@ const HeroText = () => {
   }, []);
 
   return (
-    <h1 className="tracking-widest font-extrabold w-full">
-        Hi, My name is <span ref={h1Ref}></span> 
-          <p>and im a Web Developer</p>
+    
+    <h1 className="tracking-widest font-extrabold mb-36 text-center">
+        Hi, My name is 
+        <p>
+          <span ref={h1Ref} className="text-7xl drop-shadow-[0_0_20px_#0ff] animate-pulse"></span> 
+        </p>
+        <p>and im a Web Developer</p>
+        <p className="text-xl font-thin py-4 text-[#c0fffe] underline">Come check me out!</p>
     </h1>
   );
 };
