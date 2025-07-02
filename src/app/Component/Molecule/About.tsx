@@ -66,7 +66,7 @@ const About = () => {
                     Turns out, I just love making stuff, whether it's a great user experience, a killer plate of pasta, or a weird little resin dungeons and dragon dice.</p>
                 <p className="pb-4">Coding scratches that same itch for me: mixing creativity with problem-solving, and (usually) ending up with something cool. 
                     When I'm not glued to my computer, I'll probably be trying to make a new dish or trying out a new restaurant. I also recently got into 3D modeling.</p>
-                <p className="pb-4">I'm all about the messy, rewarding process of building things <span className="text-white underline decoration-dotted">soo let us build stuff together!</span> </p>     
+                <p className="pb-4">I'm all about the messy, rewarding process of building things <span className="text-white underline decoration-dashed">soo let us build stuff together!</span> </p>     
             </div> 
         </div>
     )
