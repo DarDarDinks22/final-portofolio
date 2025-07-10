@@ -2,7 +2,7 @@ import * as THREE from "three"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { useRef } from "react"
-import { Holo } from "./holo"
+import { Holo } from "./Holo"
 import WireBox from "./WireBox"
 
 const HoloRobot = () => {
