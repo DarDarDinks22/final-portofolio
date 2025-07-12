@@ -10,7 +10,9 @@ import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes"
 }) =>{
     <Link href={link}>
         <div className="">
-            <img src={imgURL} alt={altName}/>
+            <img src={imgURL} 
+                alt={altName}
+            />
             <div className="">
                 {/* <Icon/> */}
                 <p className="">{children}</p>

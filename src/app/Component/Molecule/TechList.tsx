@@ -1,6 +1,8 @@
 const TechList = () => {
     return (
-
+        <section>
+            
+        </section>
     )
 };
 
