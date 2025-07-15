@@ -1,0 +1,1 @@
+export const TechItem: string[] = ["ReactJS","NextJS","GSAP"]

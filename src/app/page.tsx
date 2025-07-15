@@ -9,6 +9,7 @@ import { Canvas } from "@react-three/fiber";
 import Ball from "./Component/Atom/WireBox";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import About from "./Component/Molecule/About";
+import TechList from "./Component/Molecule/TechList";
 config.autoAddCss = false;
 
 const tektur = Tektur({subsets: ["latin"]})
@@ -18,6 +19,7 @@ const Home = () => {
     <div className={`${tektur.className} h-90vw w-full overflow-visible bg-[#0d0d0d] m-auto`}>
         <NavBar/>
         <Homepage/>
+        <TechList/>
         <About/>
     </div>
   );
