@@ -5,7 +5,10 @@ const TechList = () => {
         <section>
             <div>
                 {TechItem.map((tech, index) => (
-                    <div key={index}>{tech}</div>
+                    <div    key={index}
+                            className="">
+                                {tech}
+                    </div>
                 ))}
             </div>
         </section>

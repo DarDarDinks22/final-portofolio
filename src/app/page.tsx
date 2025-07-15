@@ -16,7 +16,7 @@ const tektur = Tektur({subsets: ["latin"]})
 
 const Home = () => {
   return (
-    <div className={`${tektur.className} h-90vw w-full overflow-visible bg-[#0d0d0d] m-auto`}>
+    <div className={`${tektur.className} h-90vw w-full overflow-visible bg-black m-auto`}>
         <NavBar/>
         <Homepage/>
         <TechList/>
