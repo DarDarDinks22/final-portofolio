@@ -60,7 +60,8 @@ const About = () => {
                     priority
                 />
                 <p>Hi, you can call me <span className="text-white underline">Darren!</span></p>
-                <p className="py-4">I've had a bit of a zigzag career path—from running the show as a <span className="text-white underline">front desk manager</span>, 
+                <p className="py-4">
+                    I've had a bit of a zigzag career path—from running the show as a <span className="text-white underline">front desk manager</span>, 
                     to sweating it out in kitchens as a <span className="text-white underline">cook</span>, 
                     and now diving headfirst into <span className="text-white underline">web development</span>. 
                     Turns out, I just love making stuff, whether it's a great user experience, a killer plate of pasta, or a weird little resin dungeons and dragon dice.</p>

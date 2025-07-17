@@ -30,8 +30,8 @@ export function Holo(props: React.ComponentProps<'group'>) {
       mat.emissiveIntensity = 2
       return mat
     } else {
-      console.warn('Material "Front" is not MeshStandardMaterial or is undefined')
-      return original // fallback to the original
+      console.warn('ERR')
+      return original 
     }
   }, [materials.Front])
 

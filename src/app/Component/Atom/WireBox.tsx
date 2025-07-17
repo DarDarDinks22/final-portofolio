@@ -19,11 +19,6 @@ const WireBox = (props: ThreeElements['mesh']) => {
     }
   })
 
-const handleClick = () => {
-  setActive(!active)
-  setColor(getRandomColor())
-}
-
   return (
     <mesh
       {...props}
