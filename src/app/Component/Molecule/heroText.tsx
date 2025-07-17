@@ -56,7 +56,7 @@ const HeroText = () => {
 
   return (
     
-    <h1 className="tracking-widest font-extrabold text-center">
+    <h1 className="tracking-widest font-extrabold text-center ">
         Hi, My name is 
         <p>
           <span ref={h1Ref} className="text-7xl drop-shadow-[0_0_20px_#0ff] animate-pulse"></span> 
