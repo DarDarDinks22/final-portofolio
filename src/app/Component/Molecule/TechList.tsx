@@ -7,7 +7,7 @@ const TechList = () => {
                 What I use
                 {TechItem.map((tech, index) => (
                     <div    key={index}
-                            className="">
+                            className="text-9xl">
                                 {tech}
                     </div>
                 ))}

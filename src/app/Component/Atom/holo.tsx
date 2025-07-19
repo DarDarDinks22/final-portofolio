@@ -40,7 +40,7 @@ export function Holo(props: React.ComponentProps<'group'>) {
       ref={group}
       {...props}
       dispose={null}
-      scale={[2.5, 2.5, 2.5]}
+      scale={[2.3, 2.3, 2.3]}
       position={[0, -1, 0]}
     >
       <group rotation={[-Math.PI / 2, 0, 0]} scale={0.039}>
