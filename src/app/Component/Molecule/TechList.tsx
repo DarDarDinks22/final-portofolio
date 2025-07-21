@@ -3,15 +3,23 @@ import {ScrollTrigger} from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const TechList = () => {
 
-    const gsapScrollTrigger = () =>{
-        const scrollRef = useRef();
+    const scrollRef = useRef<HTMLDivElement | null> (null);
 
-        useGSAP (() => {
+    useGSAP (() => {
+        if (!scrollRef.current) return; //TO DO ADD FALLBACK UI IF ITS NULL
 
-        },[])
-    }
+        const techNames = gsap.utils.toArray<HTMLElement>(scrollRef.current.children);
+
+        techNames.forEach((techName) => {
+            gsap.to(techName, {
+                //TO DO START ADDING ANIMATION TONIGHT
+            })
+        })
+    },[])
 
     return (
         <section>
@@ -19,7 +27,9 @@ const TechList = () => {
                 What I use
                 {TechItem.map((tech, index) => (
                     <div    key={index}
-                            className="text-9xl">
+                            className="text-9xl"
+                            id="Tech"
+                            ref={scrollRef}>
                                 {tech}
                     </div>
                 ))}
