@@ -29,7 +29,10 @@ const TechList = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: techName,
-            start: "top 100%",
+            start: "top bottom",
+            end: "top center", 
+            scrub: true, 
+            markers: false, 
             toggleActions: "play none none reset",
           },
         }
@@ -39,15 +42,15 @@ const TechList = () => {
 
   return (
     <section>
-      <div className="p-10">
+      <div className="w-full h-dvh p-10 flex items-center justify-center">
         <h2 className="text-4xl">What I use....</h2>
         <div ref={scrollRef} className="flex flex-col items-center">
           {TechItem.map((tech, index) => (
             <div
               key={`${tech}-${index}`}
-              className="tech-item text-9xl"
+              className="tech-item text-9xl uppercase"
             >
-              {tech}
+              {tech}{tech}{tech}{tech}{tech}{tech}
             </div>
           ))}
         </div>
