@@ -1,4 +1,4 @@
-import { TechItem } from "../Atom/TechListItem";
+import { TechItem, techColorMap } from "../Atom/TechListItem";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -30,9 +30,9 @@ const TechList = () => {
           scrollTrigger: {
             trigger: techName,
             start: "top bottom",
-            end: "top center", 
-            scrub: true, 
-            markers: false, 
+            end: "top center",
+            scrub: true,
+            markers: false,
             toggleActions: "play none none reset",
           },
         }
@@ -42,17 +42,30 @@ const TechList = () => {
 
   return (
     <section>
-      <div className="w-full h-dvh p-10 flex items-center justify-center">
-        <h2 className="text-4xl">What I use....</h2>
-        <div ref={scrollRef} className="flex flex-col items-center">
-          {TechItem.map((tech, index) => (
-            <div
-              key={`${tech}-${index}`}
-              className="tech-item text-9xl uppercase"
-            >
-              {tech}{tech}{tech}{tech}{tech}{tech}
-            </div>
-          ))}
+      <div className="w-full h-dvh p-10 flex flex-col items-center justify-center">
+        <h2 className="text-4xl mb-10">What I use....</h2>
+        <div ref={scrollRef} className="flex flex-col items-center gap-8">
+          {TechItem.map((tech, index) => {
+            const colorClass = techColorMap[tech] || "text-white";
+
+              return (
+                <div
+                  key={`${tech}-${index}`}
+                  className="tech-item text-9xl uppercase whitespace-nowrap flex items-center justify-center w-full">
+                  <span className="text-gray-500 opacity-20 blur-[0.3px]">
+                    {Array(10).fill(tech).join(" ")}
+                  </span>
+
+                  <span className={`${colorClass} mx-8 font-bold drop-shadow`}>
+                    {tech}
+                  </span>
+
+                  <span className="text-gray-500 opacity-20 blur-[0.3px]">
+                    {Array(10).fill(tech).join(" ")}
+                  </span>
+                </div>
+              );
+            })}
         </div>
       </div>
     </section>
