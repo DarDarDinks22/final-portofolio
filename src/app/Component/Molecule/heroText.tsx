@@ -14,14 +14,14 @@ const HeroText = () => {
 
   const animationLoop = (currentTimestamp: number) => {
     if (!previousTimeStamp.current) previousTimeStamp.current = currentTimestamp;
-    const secondsSinceLastFrame = (currentTimestamp - previousTimeStamp.current) / 750;
-    previousTimeStamp.current = currentTimestamp;
+      const secondsSinceLastFrame = (currentTimestamp - previousTimeStamp.current) / 750;
+      previousTimeStamp.current = currentTimestamp;
 
-    elapsedSeconds.current += secondsSinceLastFrame;
+      elapsedSeconds.current += secondsSinceLastFrame;
 
-    const charactersToReveal = Math.floor(elapsedSeconds.current / secondsPerCharacterReveal);
+      const charactersToReveal = Math.floor(elapsedSeconds.current / secondsPerCharacterReveal);
 
-    let animatedText = '';
+      let animatedText = '';
 
     for (let i = 0; i < hiddenText.length; i++) {
       let character = '';

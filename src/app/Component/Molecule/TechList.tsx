@@ -1,8 +1,9 @@
-import { TechItem, techColorMap } from "../Atom/TechListItem";
+import { TechItem, techColorMap, techLinks } from "../Atom/TechListItem";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,16 +43,17 @@ const TechList = () => {
 
   return (
     <section>
-      <div className="w-full h-dvh p-10 flex flex-col items-center justify-center">
-        <h2 className="text-4xl mb-10">What I use....</h2>
+      <div className="w-full h-dvh p-10 flex flex-col items-center justify-center overflow-hidden">
+        <h2 className="text-4xl pb-10">What I use....</h2>
         <div ref={scrollRef} className="flex flex-col items-center gap-8">
           {TechItem.map((tech, index) => {
-            const colorClass = techColorMap[tech] || "text-white";
+            const colorClass = techColorMap[tech];
 
               return (
                 <div
                   key={`${tech}-${index}`}
-                  className="tech-item text-9xl uppercase whitespace-nowrap flex items-center justify-center w-full">
+                  className="tech-item text-9xl uppercase whitespace-nowrap flex items-center justify-center w-full"
+                  >
                   <span className="text-gray-500 opacity-20 blur-[0.3px]">
                     {Array(10).fill(tech).join(" ")}
                   </span>
@@ -66,6 +68,25 @@ const TechList = () => {
                 </div>
               );
             })}
+        </div> 
+        <div className="flex flex-col w-full p-10">
+            <div className="text-center pb-10">Other technologies that i use...</div>
+            <div className="flex flex-row justify-evenly">
+              {techLinks.map((links, index) => {
+                return (
+                <div 
+                  className="w-[128px] h-[128px] relative"
+                  key={`${links}-${index}`}>
+                  <Image
+                  className="object-contain"
+                    src={links}
+                    alt="aaa"
+                    fill
+                    />
+                </div>
+                )
+              })}
+            </div>
         </div>
       </div>
     </section>
