@@ -13,5 +13,6 @@ export const techLinks: string [] = [
     "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/640px-Javascript-shield.svg.png",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/640px-Tailwind_CSS_Logo.svg.png", 
     "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Antu_mysql-workbench.svg/640px-Antu_mysql-workbench.svg.png",
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/640px-Node.js_logo.svg.png"
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/640px-Node.js_logo.svg.png", 
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Redux.png/640px-Redux.png"
 ]
