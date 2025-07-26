@@ -9,22 +9,24 @@ import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes"
     imgURL, 
 
 }) =>{
-    <Link href={link}>
+    return (
+    <Link href={link ?? "/"}>
         <div className="">
             <Image 
-                src=""
-                alt=""
+                src={imgURL}
+                alt={altName}
                     />
             <div className="">
                 <div className="">
-                    Hello im the title
+                    {children}
                 </div>
                 <div className="">
-                    Hello im the tech used
+                    {children}
                 </div>
             </div>
         </div>
     </Link>
-}
+    )
+};
 
 export default Project;
