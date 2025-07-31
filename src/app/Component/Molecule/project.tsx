@@ -1,32 +1,21 @@
-import Link from "next/link"
-import Image from "next/image"
-import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes"
+import Card from "./Card";
+import ProjectItems from "../Atom/Projects";
 
- const Project: React.FC<projectPropTypes> = ({
-    children,
-    link,
-    altName,
-    imgURL, 
-
-}) =>{
-    return (
-    <Link href={link ?? "/"}>
-        <div className="">
-            <Image 
-                src={imgURL}
-                alt={altName}
-                    />
-            <div className="">
-                <div className="">
-                    {children}
-                </div>
-                <div className="">
-                    {children}
-                </div>
-            </div>
-        </div>
-    </Link>
+const Project = () => {
+    return(
+    <div className="">
+        {ProjectItems.map((project, index) => (
+            <Card 
+                key={index}
+                link={project.link}
+                imgURL={project.imgURL}
+                altName={project.altName}
+                title={project.title}
+                desc={project.desc}
+        />
+        ))}
+    </div>
     )
-};
+}
 
-export default Project;
+export default Project
