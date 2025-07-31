@@ -2,5 +2,6 @@ export interface projectPropTypes {
     link?: string;
     imgURL: string;
     altName: string;
-    children?: React.ReactNode;
+    title: string;
+    desc: string;
 }
