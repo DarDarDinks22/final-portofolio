@@ -1,8 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes"
+import { forwardRef } from "react"
 
- const Card: React.FC<projectPropTypes> = ({
+ const Card = forwardRef<HTMLDivElement, projectPropTypes> (({
     link,
     altName,
     imgURL, 
@@ -27,6 +28,8 @@ import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes"
         </div>
     </Link>
     )
-};
+});
+
+Card.displayName = "Card";
 
 export default Card;

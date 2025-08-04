@@ -17,7 +17,8 @@ const Project = () => {
     },[])
 
     return(
-    <div className="">
+    <div    className=""
+            ref={scrollRef}>
         {ProjectItems.map((project, index) => (
             <Card 
                 key={index}

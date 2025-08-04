@@ -33,10 +33,31 @@ const TechList = () => {
             markers: false,
             toggleActions: "play none none reset",
           },
+          
         }
       );
     });
-  }, []);
+
+      techLinksRef.current.forEach((itemLinks, index) => {
+      if (!itemLinks) return;
+      gsap.fromTo(
+        itemLinks,
+        { scale: 0.5, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.6,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: itemLinks,
+            start: "top 80%",
+            end: "bottom center",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+}, []);
 
   return (
     <section>
