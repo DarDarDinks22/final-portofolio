@@ -1,4 +1,4 @@
-import { TechItem, techColorMap, techLinks } from "../Atom/TechListItem";
+import { TechItem, techColorMap, techLinks } from "./ItemsArray/TechListItem";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -64,7 +64,9 @@ const TechList = () => {
       <div className="w-full h-dvh p-10 flex flex-col items-center justify-center overflow-hidden">
         <h2 className="text-4xl pb-10">What I use....</h2>
         {/* Horizontal TechLinks */}
-        <div ref={scrollRef} className="flex flex-col items-center gap-8">
+        <div 
+            ref={scrollRef} 
+            className="flex flex-col items-center gap-8">
           {TechItem.map((tech, index) => {
             const colorClass = techColorMap[tech];
 
@@ -92,13 +94,14 @@ const TechList = () => {
           })}
         </div>
           {/* Vertical TechList */}
-        <div className="flex flex-col w-full p-10"
+        <div 
+              className="flex flex-col w-full p-10"
               ref={scrollRef}>
           <div className="text-center pb-10">Other technologies that I use...</div>
           <div className="flex flex-row justify-evenly">
             {techLinks.map((links, index) => {
               return (
-                <div  className="w-[128px] h-[128px] relative" 
+                <div  className="w-[8rem] h-[8rem] relative" 
                       key={`${links}-${index}`}
                       ref={(el) => {
                             if (el) techLinksRef.current[index] = el;
