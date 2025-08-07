@@ -3,7 +3,7 @@ import Image from "next/image"
 import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes"
 import { forwardRef } from "react"
 
- const Card = forwardRef<HTMLDivElement, projectPropTypes> (function Card({
+export const Card = forwardRef<HTMLDivElement, projectPropTypes> (function Card({
     link,
     altName,
     imgURL, 
