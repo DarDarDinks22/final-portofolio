@@ -1,6 +1,13 @@
 import Frame from "../Atom/Frame";
 import Robot from "../Atom/Robot";
 import HeroText from "../Molecule/HeroText";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+import { useRef } from "react";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
  const Homepage = () =>{
     return(

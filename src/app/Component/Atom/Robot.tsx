@@ -3,7 +3,6 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { useRef } from "react"
 import { Holo } from "./Holo"
-import WireBox from "./WireBox"
 
 const HoloRobot = () => {
   const meshRef = useRef<THREE.Group>(null!)

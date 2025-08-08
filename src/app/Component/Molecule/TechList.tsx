@@ -57,7 +57,7 @@ const TechList = () => {
         }
       );
     });
-}, []);
+}, {scope: scrollRef});
 
   return (
     <section>
