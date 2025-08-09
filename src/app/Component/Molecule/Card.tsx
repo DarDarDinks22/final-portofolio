@@ -14,16 +14,22 @@ export const Card = forwardRef<HTMLDivElement, projectPropTypes> (function Card(
         <Link   target="_blank"
                 href={link ?? "/"}>
             <div    ref={ref}
-                    className=" bg-[#1A1A1A] h-[20rem] w-[20rem] rounded flex flex-col gap-4 items-start justify-start">
+                    className=" bg-[#1A1A1A] h-[20rem] w-[80rem] rounded overflow-hidden flex flex-col gap-4 items-start justify-start shadow-lg shadow-gray-800">
                 {/* Description */}
-                <div className="flex flex-col gap-4 w-full h-full text-left">
-                    <div className="text-xl flex flex-col gap-2 p-4 flex-1">
-                        {title}
+                <div className="flex gap-4 w-full h-full text-left ">
+                    <Image 
+                        src={imgURL}
+                        alt={altName}
+                        width={500}
+                        height={500}
+                        className="p-6 w-2/4 rounded shadow-lg shadow-gray-800"/>
+                    <div className="text-xl flex flex-col gap-2 p-4 flex-1 shadow-lg shadow-gray-800">
+                        <p className="font-extrabold">{title}</p>
                         <div className="text-base">
-                            {desc}
+                            <p>{desc}</p>
                         </div>
                         <div className="text-sm mt-auto">
-                            Tech Used
+                            <p className="font-extrabold">Tech Used</p>
                             <div className="">
                                 Da tech
                             </div>
