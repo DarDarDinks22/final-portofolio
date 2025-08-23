@@ -11,12 +11,12 @@ gsap.registerPlugin(ScrollTrigger);
 
  const Homepage = () =>{
     return(
-        <section id="home">
-            <div className="flex h-screen w-full bg-gradient-to-b from-black via-zinc-900 to-black">
+        <section id="home" className="bg-neutral-950">
+            <div className="flex h-screen w-full">
                 <div className="flex justify-center items-center flex-1">
                     <HeroText />
                 </div>
-                <div className="flex-1 mt-16">
+                <div className="hidden md:flex md:flex-1 flex justify-center items-center mt-16">
                     <Robot />
                 </div>
                     <Frame />
