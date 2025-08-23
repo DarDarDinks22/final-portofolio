@@ -18,7 +18,8 @@ const About = () => {
     ], []);
 
     return (
-        <div className="relative p-36 h-screen w-full overflow-hidden text-[#7a7a7a]">
+        <section className="relative p-36 h-screen w-full overflow-hidden text-[#7a7a7a]"
+                id="about">
             {/* Background Canvas */}
             <div className="absolute inset-0 z-0">
                 <Canvas 
@@ -69,7 +70,7 @@ const About = () => {
                     When I'm not glued to my computer, I'll probably be trying to make a new dish or trying out a new restaurant. I also recently got into 3D modeling.</p>
                 <p className="pb-4">I'm all about the messy, rewarding process of building things <span className="text-white underline decoration-dashed">soo let us build stuff together!</span> </p>     
             </div> 
-        </div>
+        </section>
     )
 }
 

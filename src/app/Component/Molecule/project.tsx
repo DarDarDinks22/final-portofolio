@@ -61,43 +61,46 @@ const Project = () => {
     },{scope: scrollRef})
 
     return(
-    <div 
-        className="relative text-center w-full h-2/4"
-        onMouseMove={handleMouseMove}>
-        <h1 className="pb-2 text-5xl">Check out my Project!</h1>
-        <h2 className="pb-8">Click them to see the source code!</h2>
-            <div
-                ref={ghostRef}
-                className="pointer-events-none fixed top-0 left-0 w-64 h-40 z-50 opacity-0 bg-cover bg-center bg-no-repeat rounded-xl border border-white/10 shadow-xl"
-                style={{
-                mixBlendMode: "screen",
-                transition: "opacity 0.2s ease",
-                }}
-        />
-            <div    className="flex flex-col flex-wrap gap-4 justify-center items-center"
-                    ref={scrollRef}>
+    <section id="project"
+            className="scroll-mt-20">
+        <div 
+            className="relative text-center w-full h-2/4"
+            onMouseMove={handleMouseMove}>
+            <h1 className="pb-2 text-5xl">Check out my Project!</h1>
+            <h2 className="pb-8">Click them to see the source code!</h2>
+                <div
+                    ref={ghostRef}
+                    className="pointer-events-none fixed top-0 left-0 w-64 h-40 z-50 opacity-0 bg-cover bg-center bg-no-repeat rounded-xl border border-white/10 shadow-xl"
+                    style={{
+                    mixBlendMode: "screen",
+                    transition: "opacity 0.2s ease",
+                    }}
+            />
+                <div    className="flex flex-col flex-wrap gap-4 justify-center items-center"
+                        ref={scrollRef}>
 
-                {ProjectItems.map((project, index) => (
-                    <div
-                        key={index}
-                        onMouseEnter={() => handleMouseEnter(project.imgURL)}
-                        onMouseLeave={handleMouseLeave}
-                    >
-                    <Card 
-                        key={index}
-                        link={project.link}
-                        imgURL={project.imgURL}
-                        altName={project.altName}
-                        title={project.title}
-                        desc={project.desc}
-                        ref = {(el) => {
-                            if (el) itemRefs.current[index] = el ;
-                        }}
-                />
+                    {ProjectItems.map((project, index) => (
+                        <div
+                            key={index}
+                            onMouseEnter={() => handleMouseEnter(project.imgURL)}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                        <Card 
+                            key={index}
+                            link={project.link}
+                            imgURL={project.imgURL}
+                            altName={project.altName}
+                            title={project.title}
+                            desc={project.desc}
+                            ref = {(el) => {
+                                if (el) itemRefs.current[index] = el ;
+                            }}
+                    />
+                    </div>
+                    ))}
                 </div>
-                ))}
-            </div>
-    </div>
+        </div>
+    </section>
     )
 }
 
