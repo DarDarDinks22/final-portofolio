@@ -61,8 +61,7 @@ const Project = () => {
     },{scope: scrollRef})
 
     return(
-    <section id="project"
-            className="scroll-mt-20">
+    <section id="project">
         <div 
             className="relative text-center w-full h-2/4"
             onMouseMove={handleMouseMove}>
