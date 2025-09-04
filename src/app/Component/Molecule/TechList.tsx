@@ -38,7 +38,7 @@ const TechList = () => {
       );
     });
 
-      techLinksRef.current.forEach((itemLinks, index) => {
+      techLinksRef.current.forEach((itemLinks) => {
       if (!itemLinks) return;
       gsap.fromTo(
         itemLinks,

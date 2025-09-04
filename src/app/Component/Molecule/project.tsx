@@ -11,7 +11,7 @@ const Project = () => {
 
     const scrollRef = useRef<HTMLDivElement | null> (null);
     const itemRefs = useRef<HTMLDivElement[]>([]);
-    const ghostRef = useRef<HTMLDivElement | null> (null)
+    const ghostRef = useRef<HTMLDivElement | null> (null);
 
     const handleMouseMove = (e: React.MouseEvent) => {
         gsap.to(ghostRef.current, {

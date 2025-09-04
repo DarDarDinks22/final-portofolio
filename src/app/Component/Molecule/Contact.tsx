@@ -6,6 +6,8 @@ import { useRef } from "react";
 import ScrollTrigger from "gsap/all";
 import gsap from "gsap";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Contact = () => {
 
       const contactRef = useRef<HTMLDivElement | null>(null);
