@@ -1,6 +1,6 @@
 import Frame from "../Atom/Frame";
 import Robot from "../Atom/Robot";
-import HeroText from "../Molecule/HeroText";
+import HeroText from "../Molecule/heroText";
 
  const Homepage = () =>{
     return(
