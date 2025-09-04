@@ -1,17 +1,10 @@
 import Frame from "../Atom/Frame";
 import Robot from "../Atom/Robot";
 import HeroText from "../Molecule/HeroText";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
-import gsap from "gsap";
-import { useRef } from "react";
-
-
-gsap.registerPlugin(ScrollTrigger);
 
  const Homepage = () =>{
     return(
-        <section id="home" className="bg-neutral-950">
+        <section id="home" className="">
             <div className="flex h-screen w-full">
                 <div className="flex justify-center items-center flex-1">
                     <HeroText />

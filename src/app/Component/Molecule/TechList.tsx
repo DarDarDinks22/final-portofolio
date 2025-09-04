@@ -61,7 +61,7 @@ const TechList = () => {
 
   return (
     <section>
-      <div className="w-full h-dvh p-10 flex flex-col items-center justify-center overflow-hidden">
+      <div className="w-full p-10 flex flex-col items-center justify-center">
         <h2 className="text-4xl pb-10">What I use....</h2>
         {/* Horizontal TechLinks */}
         <div 

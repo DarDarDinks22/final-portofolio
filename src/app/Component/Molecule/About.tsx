@@ -1,15 +1,39 @@
 import Dice from "../Img/Dice.jpg";
 import Me from "../Img/Me.jpg";
 import Image from "next/image";
-import WireBox from "../Atom/WireBox";
-import { Canvas } from "@react-three/fiber";
-import { EffectComposer, Bloom } from '@react-three/postprocessing';
-import { useMemo } from 'react';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
+    
+      const aboutRef = useRef<HTMLDivElement | null>(null);
+    
+      useGSAP (()=> {
+    
+        if (!aboutRef.current) return;
+        
+        gsap.fromTo ( aboutRef.current, 
+          {y:-100, opacity:0} , 
+          { y: 0, 
+            opacity:1,
+            duration:1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: aboutRef.current, 
+              start: "top top", 
+              toggleActions: "play none none reverse"
+            }
+          }
+        )
+      },[])
 
     return (
-        <section className="relative min-h-screen w-full overflow-hidden text-[#7a7a7a]" id="about">
+        <section className="relative min-h-screen w-full overflow-hidden text-[#7a7a7a]" id="about"
+                ref={aboutRef}>
             <Image  
                 src={Dice}
                 alt="My DND Dice!"

@@ -1,7 +1,4 @@
 import { useRef, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
-import Ball from "../Atom/WireBox";
-import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 const HeroText = () => {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -56,13 +53,13 @@ const HeroText = () => {
 
   return (
     
-    <h1 className="text-2xl md:tracking-widest font-extrabold text-center text-2xl">
+    <h1 className="text-lg md:tracking-widest font-extrabold text-center text-2xl">
         <p>Hi, My name is</p> 
         <p>
-          <span ref={h1Ref} className="text-3xl md:text-7xl drop-shadow-[0_0_20px_#0ff] animate-pulse"></span> 
+          <span ref={h1Ref} className="text-4xl md:text-7xl drop-shadow-[0_0_20px_#0ff] animate-pulse"></span> 
         </p>
         <p>and im a Web Developer</p>
-        <p className="md:text-xl font-thin text-[#c0fffe] underline">Come check me out!</p>
+        <p className="md:text-xl font-thin text-[#c0fffe]">Come check me out!</p>
     </h1>
   );
 };

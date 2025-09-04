@@ -15,15 +15,17 @@ const tektur = Tektur({subsets: ["latin"]})
 
 const Home = () => {
   return (
-    <div className={`${tektur.className} h-screen w-full overflow-visible bg-black flex flex-col gap-[15vw]`}>
-        <NavBar/>
-        <Homepage/>
-        <TechList/>
-        <Project/>
-        <About/>
-        <Contact/>
-    </div>
+    <main className={`${tektur.className} w-full bg-neutral-950 text-white`}>
+      <NavBar />
+      <div className="flex flex-col gap-[15vw]">
+        <Homepage />
+        <TechList />
+        <Project />
+        <About />
+        <Contact />
+      </div>
+    </main>
   );
-}
+};
 
 export default Home;
