@@ -9,6 +9,7 @@ import Project from "./Component/Molecule/project";
 import About from "./Component/Molecule/About";
 import TechList from "./Component/Molecule/TechList";
 import Contact from "./Component/Molecule/Contact";
+import Experience from "./Component/Molecule/Experience";
 config.autoAddCss = false;
 
 const tektur = Tektur({subsets: ["latin"]})
@@ -21,6 +22,7 @@ const Home = () => {
         <Homepage />
         <TechList />
         <Project />
+        <Experience/>
         <About />
         <Contact />
       </div>
