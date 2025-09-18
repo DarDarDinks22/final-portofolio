@@ -15,22 +15,23 @@ const Experience = () => {
 
     return (
         <div ref={scrollRef}
-            className="">
+            className="w-full h-full px-24 flex flex-col items-center ">
             {/* toggle button */}
-            <button className=""
+            <div className="bg-gray-950 ">
+                <button className={`text-4xl mr-4 mb-4 px-4 transition-colors duration-300 ease-in-out rounded
+                                    ${ isTech ? "bg-blue-600" : "bg-slate-900"}`}
                     onClick={() => setIsTech(true)}>
                         Tech Experience
-            </button>
-            <button className=""
-                    onClick={() => setIsTech(false)}>
-                        Non-Tech Experience
-            </button>
-            {/* conditional rendering */}
-            <div className="flex">
+                </button>
+                <button className={`text-4xl mb-4 px-4 transition-colors duration-300 ease-in-out rounded
+                                    ${ isTech ? "bg-slate-900" : "bg-blue-600"}`}
+                        onClick={() => setIsTech(false)}>
+                            Non-Tech Experience
+                </button>
+            <div className="text-left max-w-2xl ">
                 {isTech ? techExpItems.map((techExp,index)=>(
-                <div>
-                    <div className=""
-                        key={`tech-${index}`}>
+                <div key={`tech-${index}`}>
+                    <div className="p-2">
                             Tech Experience
                             <div className="">
                                 <div className="">
@@ -43,9 +44,8 @@ const Experience = () => {
                 </div>
                 ))
                 : expItems.map((exp, index)=>(
-                <div>
-                    <div className=""
-                        key={`nonTech-${index}`}>
+                <div key={`nonTech-${index}`}>
+                    <div className="p-2">
                             Non-Tech Experience
                             <div className="">
                                 <div className="">
@@ -58,6 +58,10 @@ const Experience = () => {
                 </div>
                 ))}
             </div>
+            </div>
+            
+            {/* conditional rendering */}
+            
         </div>
     )
 }

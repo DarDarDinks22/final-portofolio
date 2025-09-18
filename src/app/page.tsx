@@ -2,10 +2,10 @@
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import NavBar from "./Component/Organism/navbar";
+import NavBar from "./Component/Organism/NavBar";
 import { Tektur } from "next/font/google";
 import Homepage from "./Component/Organism/homepage";
-import Project from "./Component/Molecule/project";
+import Project from "./Component/Molecule/Project";
 import About from "./Component/Molecule/About";
 import TechList from "./Component/Molecule/TechList";
 import Contact from "./Component/Molecule/Contact";
