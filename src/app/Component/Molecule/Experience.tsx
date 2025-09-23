@@ -16,7 +16,7 @@ const Experience = () => {
     return (
         <div ref={scrollRef}
             className="w-full h-full px-24 flex flex-col items-center ">
-                <span>My Experience</span>
+                <span className="text-7xl pb-4">My Experience</span>
             {/* toggle button */}
             <div className="bg-gray-950 ">
                 <button className={`text-4xl mr-4 mb-4 px-4 transition-colors duration-300 ease-in-out rounded
