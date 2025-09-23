@@ -60,7 +60,7 @@ const TechList = () => {
 }, {scope: scrollRef});
 
   return (
-    <section>
+    <section className="overflow-x-hidden">
       <div className="w-full p-10 flex flex-col items-center justify-center">
         <h2 className="text-4xl pb-10">What I use....</h2>
         {/* Horizontal TechLinks */}
