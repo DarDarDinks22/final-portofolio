@@ -3,7 +3,7 @@ const ProjectItems = [
         imgURL: "https://i.imgur.com/1YpAuLS.png", 
         altName: "Cakap.com Revamped Website Picture",
         title: "Cakap.com Revamped Website", 
-        desc: "I was in charge of the homepage of the website, this task was given to me when i got a project internship from harisenin.",
+        desc: "I was in charge of the Homepage of the website, this task was given to me when i got a project internship from harisenin.",
         
     },
     {   link: "https://github.com/HariSenin-Kelompok-2/Project-React",
