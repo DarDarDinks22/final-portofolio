@@ -9,7 +9,7 @@ import HeroText from "../Molecule/HeroText";
                 <div className="flex justify-center items-center flex-1">
                     <HeroText />
                 </div>
-                <div className="hidden md:flex md:flex-1 flex justify-center items-center mt-16">
+                <div className="hidden lg:flex lg:flex-1 flex justify-center items-center mt-16">
                     <Robot />
                 </div>
                     <Frame />
