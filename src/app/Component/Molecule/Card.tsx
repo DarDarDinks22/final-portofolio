@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes"
+import { projectPropTypes } from "./MoleculePropTypes/projectPropTypes";
 import { forwardRef } from "react"
 
 export const Card = forwardRef<HTMLDivElement, projectPropTypes> (function Card({
