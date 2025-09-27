@@ -36,7 +36,6 @@ const Experience = () => {
     return (
         <div ref={scrollRef}
             className="w-full h-full px-24 flex flex-col items-center ">
-                <span className="text-7xl pb-4">My Experience</span>
             {/* toggle button */}
             <div className="text-7xl pb-4">My Experience</div>
             <div>

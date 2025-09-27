@@ -3,5 +3,6 @@ export type projectPropTypes = {
     altName: string,
     imgURL: string, 
     title: string,
-    desc: string
+    desc: string,
+    tech: string[]
 }

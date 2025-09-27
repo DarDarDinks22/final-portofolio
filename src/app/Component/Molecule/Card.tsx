@@ -8,7 +8,8 @@ export const Card = forwardRef<HTMLDivElement, projectPropTypes> (function Card(
     altName,
     imgURL, 
     title, 
-    desc
+    desc,
+    tech
 },  ref) {
     return (
         <Link   target="_blank"
@@ -31,7 +32,14 @@ export const Card = forwardRef<HTMLDivElement, projectPropTypes> (function Card(
                         <div className="text-sm mt-auto">
                             <p className="font-extrabold">Tech Used</p>
                             <div className="">
-                                Da tech
+                                {tech.map ((item, index) => (
+                                    <Image src={item}
+                                        alt="Project Tech"
+                                        key={index}
+                                        width={32}
+                                        height={32}
+                                        className=""/>
+                                ))}  
                             </div>
                         </div>
                     </div>

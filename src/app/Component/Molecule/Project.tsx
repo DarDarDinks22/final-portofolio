@@ -91,6 +91,7 @@ const Project = () => {
                             altName={project.altName}
                             title={project.title}
                             desc={project.desc}
+                            tech={project.tech}
                             ref = {(el) => {
                                 if (el) itemRefs.current[index] = el ;
                             }}
