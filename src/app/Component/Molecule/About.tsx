@@ -32,7 +32,7 @@ const About = () => {
       },[])
 
     return (
-        <section className="relative min-h-screen w-full overflow-hidden text-[#7a7a7a]" id="about"
+        <section className="relative min-h-screen w-full text-[#7a7a7a]" id="about"
                 ref={aboutRef}>
             <Image  
                 src={Dice}
@@ -52,7 +52,7 @@ const About = () => {
             />
 
             {/* Text Content */}
-            <div className="relative z-20 h-screen max-w-4xl mx-auto px-4 md:p-24 text-2xl">
+            <div className="relative z-20 max-w-4xl mx-auto px-4 py-24 md:p-24 text-2xl">
               <div className="text-4xl pb-4 text-white md:text-7xl">About Me</div>
                 <p>Hi, you can call me <span className="text-white underline">Darren!</span></p>
                 <p className="py-4">

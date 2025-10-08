@@ -39,13 +39,15 @@ const Experience = () => {
             {/* toggle button */}
             <div className="text-3xl pb-4 md:text-7xl flex">My Experience</div>
             <div className="px-4">
-                <button className={`text-3xl mr-4 mb-4 px-4 transition-colors duration-300 ease-in-out rounded w-full
-                                    ${ isTech ? "bg-blue-600" : "bg-slate-900"}`}
+                <button className={`text-2xl mr-4 mb-4 px-4 transition-colors duration-300 ease-in-out rounded w-full
+                                    ${ isTech ? "bg-blue-600" : "bg-slate-900"}
+                                    md:text-4xl`}
                     onClick={() => setIsTech(true)}>
                         Tech Experience
                 </button>
-                <button className={`text-3xl mb-4 px-4 transition-colors duration-300 ease-in-out rounded w-full
-                                    ${ isTech ? "bg-slate-900" : "bg-blue-600"}`}
+                <button className={`text-2xl mb-4 px-4 transition-colors duration-300 ease-in-out rounded w-full
+                                    ${ isTech ? "bg-slate-900" : "bg-blue-600"} 
+                                    md:text-4xl`}
                         onClick={() => setIsTech(false)}>
                             Non-Tech Experience
                 </button>

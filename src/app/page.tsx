@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <main className={`${tektur.className} w-full bg-neutral-950 text-white rounded-none`}>
       <NavBar />
-      <div className="flex flex-col gap-[15vw]">
+      <div className="flex flex-col gap-[50vw] md:gap-[25vw]">
         <Homepage />
         <TechList />
         <Project />
