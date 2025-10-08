@@ -15,7 +15,7 @@ export const Card = forwardRef<HTMLDivElement, projectPropTypes> (function Card(
         <Link   target="_blank"
                 href={link ?? "/"}>
             <div    ref={ref}
-                    className=" bg-[#1A1A1A] h-[30rem] w-[20rem] rounded overflow-hidden flex flex-col gap-4 items-start justify-start shadow-lg shadow-gray-800 flex-nowrap">
+                    className=" bg-[#1A1A1A] h-[35rem] w-[20rem] rounded overflow-hidden flex flex-col gap-4 items-start justify-start shadow-lg shadow-gray-800 flex-nowrap">
                 {/* Description */}
                 <div className=" gap-4 w-full h-full text-left hover:opacity-75">
                     <Image 
@@ -29,11 +29,11 @@ export const Card = forwardRef<HTMLDivElement, projectPropTypes> (function Card(
                         <div className="text-base">
                             <p>{desc}</p>
                         </div>
-                        <div className="text-sm mt-auto bottom-0 left-0 absolute p-4">
+                        <div className="text-sm m p-4 absolute bottom-1 left-1 ">
                             <p className="font-extrabold">Tech Used</p>
-                            <div className="">
+                            <div className="flex flex-wrap text-xs">
                                 {tech.map ((item, index) => (
-                                    <p key={index}>{item}</p>
+                                    <p key={index}>{item}&nbsp;</p>
                                 ))}  
                             </div>
                         </div>

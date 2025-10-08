@@ -56,7 +56,7 @@ const About = () => {
               <div className="text-4xl pb-4 text-white md:text-7xl">About Me</div>
                 <p>Hi, you can call me <span className="text-white underline">Darren!</span></p>
                 <p className="py-4">
-                    I&apos;ve had a bit of a zigzag career path—from running the show as a <span className="text-white underline">front desk manager</span>, 
+                    I&apos;ve had a bit of a zigzag career path—from running the show as a <span className="text-white underline">front desk agent</span>, 
                     to sweating it out in kitchens as a <span className="text-white underline">cook</span>, 
                     and now diving headfirst into <span className="text-white underline">web development</span>. 
                     Turns out, I just love making stuff, whether it&aposs a great user experience, a killer plate of pasta, or a weird little resin dungeons and dragon dice.
