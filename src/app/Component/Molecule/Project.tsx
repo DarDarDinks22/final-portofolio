@@ -75,7 +75,7 @@ const Project = () => {
                     transition: "opacity 0.2s ease",
                     }}
             />
-                <div    className="flex flex-col flex-wrap gap-4 justify-center items-center" 
+                <div    className="flex  flex-wrap gap-4 justify-center items-center" 
                         ref={scrollRef}>
 
                     {ProjectItems.map((project, index) => (

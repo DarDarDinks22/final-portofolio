@@ -35,16 +35,16 @@ const Experience = () => {
 
     return (
         <div ref={scrollRef}
-            className="w-full h-full px-24 flex flex-col items-center ">
+            className="w-full h-full flex flex-col items-center md:px-2">
             {/* toggle button */}
-            <div className="text-7xl pb-4">My Experience</div>
-            <div>
-                <button className={`text-3xl mr-4 mb-4 px-4 transition-colors duration-300 ease-in-out rounded
+            <div className="text-3xl pb-4 md:text-7xl flex">My Experience</div>
+            <div className="px-4">
+                <button className={`text-3xl mr-4 mb-4 px-4 transition-colors duration-300 ease-in-out rounded w-full
                                     ${ isTech ? "bg-blue-600" : "bg-slate-900"}`}
                     onClick={() => setIsTech(true)}>
                         Tech Experience
                 </button>
-                <button className={`text-3xl mb-4 px-4 transition-colors duration-300 ease-in-out rounded
+                <button className={`text-3xl mb-4 px-4 transition-colors duration-300 ease-in-out rounded w-full
                                     ${ isTech ? "bg-slate-900" : "bg-blue-600"}`}
                         onClick={() => setIsTech(false)}>
                             Non-Tech Experience

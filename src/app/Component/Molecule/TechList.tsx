@@ -8,7 +8,8 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 
 const TechList = () => {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const horizontalRef = useRef<HTMLDivElement | null>(null);
+  const verticalRef = useRef<HTMLDivElement | null>(null);
 
   const itemRefs = useRef<HTMLElement[]>([]);
   const techLinksRef = useRef<HTMLDivElement[]>([]);
@@ -57,7 +58,9 @@ const TechList = () => {
         }
       );
     });
-}, {scope: scrollRef});
+}, {scope: horizontalRef});
+
+
 
   return (
     <section className="overflow-x-hidden">
@@ -65,7 +68,7 @@ const TechList = () => {
         <h2 className="text-4xl pb-10">What I use....</h2>
         {/* Horizontal TechLinks */}
         <div 
-            ref={scrollRef} 
+            ref={horizontalRef} 
             className="flex flex-col items-center gap-8">
           {TechItem.map((tech, index) => {
             const colorClass = techColorMap[tech];
@@ -76,7 +79,7 @@ const TechList = () => {
                 ref={(el) => {
                   if (el) itemRefs.current[index] = el;
                 }}
-                className="tech-item text-9xl uppercase whitespace-nowrap flex items-center justify-center w-full"
+                className="tech-item text-6xl uppercase whitespace-nowrap flex items-center justify-center w-full md:text-9xl"
               >
                 <span className="text-gray-500 opacity-20 blur-[0.3px]">
                   {Array(10).fill(tech).join(" ")}
@@ -95,13 +98,14 @@ const TechList = () => {
         </div>
           {/* Vertical TechList */}
         <div 
-              className="flex flex-col w-full p-10"
-              ref={scrollRef}>
+              className="flex flex-col w-full md:p-10"
+              ref={verticalRef}>
           <div className="text-center pb-10">Other technologies that I use...</div>
-          <div className="flex flex-row justify-evenly">
+          <div className="flex flex-row justify-evenly flex-wrap">
             {techLinks.map((links, index) => {
               return (
-                <div  className="w-[8rem] h-[8rem] relative" 
+                <div  className="w-[5rem] h-[5rem] relative flex-shrink-0 m-2 md:w-[10rem] h-[10rem]" 
+                      style={{ animationName: "scroll" }}
                       key={`${links}-${index}`}
                       ref={(el) => {
                             if (el) techLinksRef.current[index] = el;

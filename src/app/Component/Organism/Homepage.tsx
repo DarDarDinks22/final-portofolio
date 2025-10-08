@@ -5,7 +5,7 @@ import HeroText from "../Molecule/HeroText";
  const Homepage = () =>{
     return(
         <section id="home" className="">
-            <div className="flex h-screen w-full">
+            <div className="flex h-screen w-screen">
                 <div className="flex justify-center items-center flex-1">
                     <HeroText />
                 </div>

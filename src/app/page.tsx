@@ -16,7 +16,7 @@ const tektur = Tektur({subsets: ["latin"]})
 
 const Home = () => {
   return (
-    <main className={`${tektur.className} w-full bg-neutral-950 text-white`}>
+    <main className={`${tektur.className} w-full bg-neutral-950 text-white rounded-none`}>
       <NavBar />
       <div className="flex flex-col gap-[15vw]">
         <Homepage />
