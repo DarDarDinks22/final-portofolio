@@ -26,7 +26,7 @@ const ProjectItems = [
         altName: "Liquid Store Website",
         title: "Liquid Store Website", 
         desc: "This is currently being worked on, i'm making a vape liquid store website for a family member.",
-        tech: ["Typescript", "React", "NextJS", "Tailwind", "GSAP"]
+        tech: ["Typescript", "React", "NextJS", "Tailwind", "GSAP", "Redux","MySQL"]
     },
 ];
 
