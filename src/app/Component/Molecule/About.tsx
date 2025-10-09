@@ -59,7 +59,7 @@ const About = () => {
                     I&apos;ve had a bit of a zigzag career path—from running the show as a <span className="text-white underline">front desk agent</span>, 
                     to sweating it out in kitchens as a <span className="text-white underline">cook</span>, 
                     and now diving headfirst into <span className="text-white underline">web development</span>. 
-                    Turns out, I just love making stuff, whether it&aposs;s a great user experience, a killer plate of pasta, or a weird little resin dungeons and dragon dice.
+                    Turns out, I just love making stuff, whether its a great user experience, a killer plate of pasta, or a weird little resin dungeons and dragon dice.
                 </p>
                 <p className="pb-4">
                     Coding scratches that same itch for me: mixing creativity with problem-solving, and (usually) ending up with something cool. 
