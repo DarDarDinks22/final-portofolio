@@ -29,16 +29,20 @@ const NavBar = () => {
   return (
     <nav ref={navRef}
         className="fixed z-50">
-      <button className="flex flex-col w-[4rem] p-2 fixed z-20 md:hidden"  
+      <button className={`flex flex-col w-[4rem] p-2 fixed z-20 md:hidden ${open ? "animate-smoothSpin" : ""}`}   
               onClick={() => setIsOpen(!open)}
               aria-label="Navigation Bar">
           {open ? <FaTimes size={28}/> : <FaBars size={28} /> }
       </button>
-      <div className={`md:flex justify-evenly p-4 text-large sticky top-0 z-10 font-semibold w-screen ${open ? "flex flex-col gap-4 pt-12 bg-zinc-900 text-2xl" : "hidden"}`}>
-        <a href="#home">HOME</a>
-        <a href="#project">PROJECT</a>
-        <a href="#about">ABOUT</a>
-        <a href="#contact">CONTACT</a>
+      <div className={`md:flex justify-evenly p-4 text-large sticky top-0 z-10 font-semibold w-screen ${open ? "flex flex-col gap-4 pt-12 bg-zinc-900 text-2xl opacity-75 animate-navBarOpen" : "hidden"}`}>
+        <a href="#home"
+            className="hover:underline ">HOME</a>
+        <a href="#project"
+            className="hover:underline ">PROJECT</a>
+        <a href="#about"
+            className="hover:underline ">ABOUT</a>
+        <a href="#contact"
+            className="hover:underline ">CONTACT</a>
       </div>
     </nav>
   );

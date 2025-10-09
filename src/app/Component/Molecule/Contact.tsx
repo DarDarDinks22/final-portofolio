@@ -1,6 +1,6 @@
 import Icon from "../Atom/Icon";
-import { faGithub, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faWhatsapp, faLinkedin  } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import ScrollTrigger from "gsap/all";
@@ -45,6 +45,12 @@ const Contact = () => {
                         rel="noopener noreferrer"
                         href={`https://github.com/DarDarDinks22`}> 
                             <Icon  iconType={faGithub}/>
+                    </a> 
+                    <a 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={`https://linkedin.com/in/darren-jonathan`}> 
+                            <Icon  iconType={faLinkedin}/>
                     </a>
                     <a 
                         target="_blank"
@@ -52,12 +58,14 @@ const Contact = () => {
                         href={`https://wa.me/${phoneNumber}`}> 
                             <Icon  iconType={faWhatsapp}/>
                     </a>
+                   
                     <a 
                         target="_blank"
                         rel="noopener noreferrer"
                         href={`https://mail.google.com/mail/?view=cm&to=darrenbusiness74@gmail.com&su=SUBJECT&body=BODY`}> 
                             <Icon  iconType={faEnvelope}/>
                     </a>
+                    
                 </div>
             </div>
         </section>

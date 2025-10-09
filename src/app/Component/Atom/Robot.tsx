@@ -8,11 +8,11 @@ const HoloRobot = () => {
   const meshRef = useRef<THREE.Group>(null!)
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
 
-  // track mouse relative to window
+  // Buat tracking mouse (punyeng)
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth) * 2 - 1
-      const y = (e.clientY / window.innerHeight) * 2 - 1
+      const x = (e.clientX / window.innerWidth) * 1
+      const y = (e.clientY / window.innerHeight) * 1
       setMousePos({ x, y })
     }
     window.addEventListener("mousemove", handleMouseMove)

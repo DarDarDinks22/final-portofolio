@@ -51,16 +51,15 @@ const Experience = () => {
                         onClick={() => setIsTech(false)}>
                             Non-Tech Experience
                 </button>
-            <div className="text-left max-w-2xl ">
+            <div className="text-left w-full">
                 {isTech ? techExpItems.map((techExp,index)=>(
                 <div key={`tech-${index}`}>
                     <div className="p-2">
-                            placeholder
                             <div className="">
                                 <div className="">
-                                    <p>{techExp.jobTitle}</p>
+                                    <p className="text-xl">{techExp.jobTitle}</p>
                                     <p>{techExp.place}</p>
-                                    <p>{techExp.date}</p>
+                                    <p className="text-xs">{techExp.date}</p>
                                 </div>
                             </div>
                     </div>
@@ -69,12 +68,11 @@ const Experience = () => {
                 : expItems.map((exp, index)=>(
                 <div key={`nonTech-${index}`}>
                     <div className="p-2">
-                            placeholder2
                             <div className="">
                                 <div className="">
-                                    <p>{exp.jobTitle}</p>
+                                    <p className="text-xl">{exp.jobTitle}</p>
                                     <p>{exp.place}</p>
-                                    <p>{exp.date}</p>
+                                    <p className="text-xs">{exp.date}</p>
                                 </div>
                             </div>
                     </div>

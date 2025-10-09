@@ -24,7 +24,7 @@ const About = () => {
             ease: "power3.out",
             scrollTrigger: {
               trigger: aboutRef.current, 
-              start: "top top", 
+              start: "top center", 
               toggleActions: "play none none reverse"
             }
           }
@@ -52,7 +52,7 @@ const About = () => {
             />
 
             {/* Text Content */}
-            <div className="relative z-20 max-w-4xl mx-auto px-4 py-24 md:p-24 text-2xl">
+            <div className="relative z-20 max-w-4xl mx-auto px-4 py-24 md:py-24 text-2xl">
               <div className="text-4xl pb-4 text-white md:text-7xl">About Me</div>
                 <p>Hi, you can call me <span className="text-white underline">Darren!</span></p>
                 <p className="py-4">

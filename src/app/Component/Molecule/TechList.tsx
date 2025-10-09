@@ -31,7 +31,6 @@ const TechList = () => {
             start: "top bottom",
             end: "top center",
             scrub: true,
-            markers: false,
             toggleActions: "play none none reset",
           },
           
@@ -40,23 +39,23 @@ const TechList = () => {
     });
 
       techLinksRef.current.forEach((itemLinks) => {
-      if (!itemLinks) return;
-      gsap.fromTo(
-        itemLinks,
-        { scale: 0.5, opacity: 0 },
-        {
-          scale: 1,
-          opacity: 1,
-          duration: 0.6,
-          ease: "back.out(1.7)",
-          scrollTrigger: {
-            trigger: itemLinks,
-            start: "top 80%",
-            end: "bottom center",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
+        if (!itemLinks) return;
+          gsap.fromTo(
+            itemLinks,
+            { scale: 0.5, opacity: 0 },
+            {
+              scale: 1,
+              opacity: 1,
+              duration: 0.6,
+              ease: "back.out(1.7)",
+              scrollTrigger: {
+                trigger: itemLinks,
+                start: "top 80%",
+                end: "bottom center",
+                toggleActions: "play none none reverse",
+              },
+            }
+          );
     });
 }, {scope: horizontalRef});
 
