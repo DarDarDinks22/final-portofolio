@@ -1,17 +1,18 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/all";
-import { expItems, techExpItems } from "./ItemsArray/ExpItem";
+import { expItems } from "./ItemsArray/ExpItem";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 const Experience = () => {
 
-    const [isTech,setIsTech] = useState(true);
     
     const scrollRef = useRef<HTMLDivElement | null>(null);
+
     
     useGSAP (() => {
         gsap.fromTo (scrollRef.current, {
@@ -36,54 +37,26 @@ const Experience = () => {
     return (
         <div ref={scrollRef}
             className="w-full h-full flex flex-col items-center md:px-2">
-            {/* toggle button */}
             <div className="text-3xl pb-4 md:text-7xl flex">My Experience</div>
-            <div className="px-4">
-                <button className={`text-2xl mr-4 mb-4 px-4 transition-colors duration-300 ease-in-out rounded w-full
-                                    ${ isTech ? "bg-blue-600" : "bg-slate-900"}
-                                    md:text-4xl`}
-                    onClick={() => setIsTech(true)}>
-                        Tech Experience
-                </button>
-                <button className={`text-2xl mb-4 px-4 transition-colors duration-300 ease-in-out rounded w-full
-                                    ${ isTech ? "bg-slate-900" : "bg-blue-600"} 
-                                    md:text-4xl`}
-                        onClick={() => setIsTech(false)}>
-                            Non-Tech Experience
-                </button>
-            <div className="text-left w-full">
-                {isTech ? techExpItems.map((techExp,index)=>(
-                <div key={`tech-${index}`}>
-                    <div className="p-2">
-                            <div className="">
-                                <div className="">
-                                    <p className="text-xl">{techExp.jobTitle}</p>
-                                    <p>{techExp.place}</p>
-                                    <p className="text-xs">{techExp.date}</p>
-                                </div>
-                            </div>
+            {/*Timeline*/}
+            <div className="">
+                {expItems.map ((exp, index) => {
+                    return(
+                    <div className={`flex h-40 w-full items-center relative `} 
+                        key= {`exp-${index}`}>
+                    <div className="line absolute top-0 bottom-0 w-[0.2rem] bg-white ">
+                        <div className="text-xs w-[10rem] md:w-screen text-base px-4 ">
+                            <p className="">{exp.jobTitle}</p>
+                            <p className="text-slate-500">{exp.place}</p>
+                            <p className="text-slate-500">{exp.date}</p>
+                        </div>
                     </div>
+                    <div className="rounded bg-indigo-600 w-3 h-3 border-2 border-white"/>
                 </div>
-                ))
-                : expItems.map((exp, index)=>(
-                <div key={`nonTech-${index}`}>
-                    <div className="p-2">
-                            <div className="">
-                                <div className="">
-                                    <p className="text-xl">{exp.jobTitle}</p>
-                                    <p>{exp.place}</p>
-                                    <p className="text-xs">{exp.date}</p>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                ))}
+                )})}
+                
             </div>
-            </div>
-            
-            {/* conditional rendering */}
-            
-        </div>
+        </div>      
     )
 }
 

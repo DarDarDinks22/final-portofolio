@@ -28,7 +28,7 @@ const NavBar = () => {
 
   return (
     <nav ref={navRef}
-        className="fixed z-50">
+        className="fixed z-50 bg-neutral-950 w-screen ">
       <button className={`flex flex-col w-[4rem] p-2 fixed z-20 md:hidden ${open ? "animate-smoothSpin" : ""}`}   
               onClick={() => setIsOpen(!open)}
               aria-label="Navigation Bar">
