@@ -46,7 +46,7 @@ const Experience = () => {
                         key= {`exp-${index}`}>
                     <div className="line absolute top-0 bottom-0 w-[0.2rem] bg-white ">
                         <div className="text-xs w-[10rem] md:w-screen text-base px-4 ">
-                            <p className="">{exp.jobTitle}</p>
+                            <p className="text-sm md:text-lg">{exp.jobTitle}</p>
                             <p className="text-slate-500">{exp.place}</p>
                             <p className="text-slate-500">{exp.date}</p>
                         </div>
