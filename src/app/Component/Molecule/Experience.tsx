@@ -41,8 +41,9 @@ const Experience = () => {
             {/*Timeline*/}
             <div className="">
                 {expItems.map ((exp, index) => {
+                    const odd = index % 2 === 0;
                     return(
-                    <div className={`flex h-40 w-full items-center relative `} 
+                    <div className={`flex h-40 w-full items-center relative ${odd ? "translateX-[-17em]":""}`} 
                         key= {`exp-${index}`}>
                     <div className="line absolute top-0 bottom-0 w-[0.2rem] bg-white ">
                         <div className="text-xs w-[10rem] md:w-screen text-base px-4 ">
