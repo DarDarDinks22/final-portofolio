@@ -1,5 +1,5 @@
 import Icon from "../Atom/Icon";
-import { faGithub, faWhatsapp, faLinkedin  } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin  } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
@@ -31,7 +31,6 @@ const Contact = () => {
             )
         },[])
 
-    const phoneNumber = "6281357836633"
 
     return (
         <section className="w-full h-screen flex justify-center items-center"
@@ -52,13 +51,6 @@ const Contact = () => {
                         href={`https://linkedin.com/in/darren-jonathan`}> 
                             <Icon  iconType={faLinkedin}/>
                     </a>
-                    <a 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={`https://wa.me/${phoneNumber}`}> 
-                            <Icon  iconType={faWhatsapp}/>
-                    </a>
-                   
                     <a 
                         target="_blank"
                         rel="noopener noreferrer"
