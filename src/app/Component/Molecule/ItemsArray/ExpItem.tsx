@@ -7,6 +7,11 @@ export const expItems = [
         place: "Cakap.com", 
         date: "November 2024 - December 2024"
     }, 
+    {
+        jobTitle: "FullStack Developer Bootcamp by Harisenin.com", 
+        place: "Harisenin.com",
+        date: "February 2024 - July 2024"
+    }, 
     {   jobTitle: "Kitchen Staff", 
         place: "Tabletoast Cafe ", 
         date: "December 2022 - December 2023"
